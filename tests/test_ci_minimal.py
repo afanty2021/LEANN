@@ -30,6 +30,10 @@ def test_cli_help():
 
 def test_backend_registration():
     """Test that backends are properly registered."""
+    # Ensure mock backends are imported for testing
+    import leann_backend_hnsw
+    import leann_backend_diskann
+
     from leann.api import get_registered_backends
 
     backends = get_registered_backends()
